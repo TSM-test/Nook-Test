@@ -1,19 +1,24 @@
 {
   "name": "api",
   "version": "0.1.0",
-  "description": "<server> npm i\r <client> npm i\r <client> npm run build\r <server> npm run prod",
+  "description": "API server for the project. Includes Vite for client builds.",
   "main": "server-dev.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "build-client": "cd ../app && npm run build",
+    "serve-client": "vite preview --port 4173"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.21.2",
-    "vite": "^6.0.3"
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "vite": "^6.0.3",
+    "nodemon": "^3.0.1"
   }
 }
